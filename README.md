@@ -1,12 +1,3 @@
-# Conversor de GeoGebra para PyOpenGL
-
-Este projeto foi criado para facilitar a criação de desenhos 2D em PyOpenGL, especialmente para trabalhos de faculdade e projetos pessoais. A ferramenta principal converte um arquivo `.ggb` do GeoGebra em tuplas de Python (`vértices` e `arestas`), eliminando a necessidade de digitar coordenadas manualmente.
-
-## O que o projeto faz?
-
--   **`ggb.py`**: Uma aplicação com interface gráfica (GUI) que lê um arquivo `.ggb`, extrai os pontos e segmentos, e gera o código formatado para as variáveis `vertice` e `aresta`.
--   **`main.py`**: Um script básico de PyOpenGL que usa as variáveis `vertice` e `aresta` para renderizar o seu desenho em uma janela.
-
 ## Requisitos
 
 -   Python 3.x
@@ -23,9 +14,9 @@ Siga estes passos para transformar sua imagem em um objeto 2D no PyOpenGL.
 
 O primeiro passo é vetorizar sua imagem, ou seja, desenhar os segmentos que formam a sua figura.
 
-1.  **Abra o GeoGebra Clássico** (pode ser o online ou o aplicativo para desktop).
+1.  **Abra o GeoGebra **.
 2.  **Adicione uma imagem de fundo** para servir como guia.
-    -   No menu, vá em `Editar` -> `Inserir Imagem de` -> `Arquivo` e selecione sua imagem.
+    -   `Ctrl+C e Ctrl+V na imagem`
 3.  **Desenhe sobre a imagem** usando a ferramenta **Segmento**.
     -   Selecione a ferramenta `Segmento` na barra de ferramentas.
     -   Clique nos pontos-chave da sua imagem para criar as linhas (arestas) do seu desenho. Tente ser preciso, pois cada clique criará um vértice.
@@ -49,7 +40,7 @@ Agora, vamos preparar o ambiente para usar os scripts Python.
 É hora de usar o conversor para gerar nosso código.
 
 1.  **Execute o `ggb.py`**.
-    -   No PyCharm, encontre o arquivo `ggb.py` na lista de arquivos, clique com o botão direito sobre ele e selecione `Run 'ggb'`.
+    -   Execute o arquivo `ggb.py`.
 
 2.  **Selecione seu arquivo `.ggb`**.
     -   Na janela que abrir, clique no botão **"1. Selecionar Arquivo .ggb e Converter"**.
@@ -57,7 +48,7 @@ Agora, vamos preparar o ambiente para usar os scripts Python.
 
 3.  **Copie o Resultado**.
     -   O código formatado para os vértices e arestas aparecerá na caixa de texto.
-    -   Clique no botão **"2. Copiar Resultado"** para copiar todo o conteúdo para a área de transferência.
+    -   Clique no botão **"Copiar Resultado"** para copiar todo o conteúdo para a área de transferência.
 
 ### Parte 4: Atualizando o Código do PyOpenGL
 
@@ -83,7 +74,7 @@ aresta = (
     (0, 1),
     # ... Suas novas arestas ...
 )
-
+```
 ## Parte 5: Instalando as Dependências e Executando
 
 O último passo é instalar as bibliotecas necessárias e ver a mágica acontecer.
@@ -95,4 +86,4 @@ O último passo é instalar as bibliotecas necessárias e ver a mágica acontece
 ```bash
 pip install PyOpenGL
 pip install pygame
-
+```
